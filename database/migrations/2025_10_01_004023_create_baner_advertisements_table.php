@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('baner_advertisements', function (Blueprint $table) {
             $table->id();
+            $table->string('link');
+            $table->string('type');
+            $table->string('thumbnail');
+            $table->enum('is_featured', ['featured', 'not_featured'])->default('not_featured');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
