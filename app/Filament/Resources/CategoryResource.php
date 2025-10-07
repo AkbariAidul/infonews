@@ -38,7 +38,8 @@ class CategoryResource extends Resource
 
                     Forms\Components\FileUpload::make('icon')
                     ->image()
-                    ->required(),            ]);
+                    ->required(),            
+                ]);
     }
 
     public static function table(Table $table): Table
